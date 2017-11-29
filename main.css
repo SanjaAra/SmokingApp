@@ -1,0 +1,132 @@
+/*******************************
+          Global Styles
+********************************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*******************************
+          Layout Styles
+********************************/
+
+#statPage {
+  display: none;
+}
+
+.myBtn {
+  margin: 10px;
+  float: right;
+  box-shadow: 0 0 5px gray;
+}
+
+.btn-cadet {
+  background: cadetblue;
+  color: #fff;
+  border: 1px solid cadetblue;
+}
+
+.btn-cadet:focus, .btn-cadet:hover {
+  color: #fff;
+}
+
+.navbar-brand {
+  margin-bottom: 0px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  margin: 10px auto;
+  background-color: tomato;
+  border-radius: 50%;
+  line-height: 200px;
+  text-align: center;
+  font-size: 100px;
+}
+
+.info-div {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding-bottom: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.info-div>p:last-child {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+/*** Stat Page ***/
+
+#graficon {
+  height: 160px;
+  margin-top: 30px;
+  border-bottom: 2px solid gray;
+  border-left: 2px solid gray;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.cigPerDay {
+  width: 25px;
+  height: 100%;
+  background: linear-gradient(red, yellow, white);
+}
+
+.cover {
+  width: 25px;
+  height: 100%;
+  background-color: #f9f9f9;
+}
+
+.seven-days {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.day {
+  width: 25px;
+  text-align: center;
+  margin-left: 3px;
+}
+
+#homeBtn {
+  margin-top: 30px;
+}
+
+footer {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: cadetblue;
+  width: 100%;
+  font-weight: bold;
+  color: white;
+}
+
+footer img {
+  height: 14px;
+  margin: 0 6px;
+  margin-bottom: 5px;
+}
+
+/*******************************
+          Specific Styles
+********************************/
+
+/*******************************
+          HElper Classes
+********************************/
