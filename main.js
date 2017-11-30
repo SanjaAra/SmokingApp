@@ -1,4 +1,4 @@
-let newDayBtn = document.getElementsByClassName('myBtn')[0],
+let newDayBtn = document.getElementById('newDayBtn'),
   statBtn = document.getElementById('statBtn'),
   homeBtn = document.getElementById('homeBtn'),
   circle = document.getElementsByClassName('circle')[0],
