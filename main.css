@@ -11,6 +11,14 @@
           Layout Styles
 ********************************/
 
+.navbar-brand {
+  padding: 5px 15px;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
 #statPage {
   display: none;
 }
@@ -28,11 +36,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 1px;
-  transition: background-size .7s ease;
-}
-
-.circle:hover {
-  background-size: 500px;
+  transition: all .5s ease;
 }
 
 .info-div {
@@ -57,6 +61,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+  box-sizing: content-box;
 }
 
 .cigPerDay {
@@ -70,16 +75,6 @@
   height: 160px;
   background-color: #f9f9f9;
   transition: all .7 ease;
-  animation: 3s move;
-}
-
-@keyframes move {
-  from {
-    height: 100%;
-  }
-  to {
-    height;
-  }
 }
 
 .seven-days {

@@ -69,7 +69,10 @@ function update() {
   }
   saveVars();
   updateView();
-
+  circle.style.backgroundSize = "600px";
+  setTimeout(function() {
+    circle.style.backgroundSize = "1px";
+  }, 500)
 }
 
 function resetDay() {
@@ -153,7 +156,7 @@ function noSmokeTime() {
 };
 
 (function messageRnd() {
-  let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Stop smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!"];
+  let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Stop smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!", "Quit Smoking, Life is Beautiful!"];
   let i = Math.floor(Math.random() * quitSmokingMsg.length);
   message.innerHTML = quitSmokingMsg[i];
 }());
