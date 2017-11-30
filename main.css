@@ -15,26 +15,6 @@
   display: none;
 }
 
-.myBtn {
-  margin: 10px;
-  float: right;
-  box-shadow: 0 0 5px gray;
-}
-
-.btn-cadet {
-  background: cadetblue;
-  color: #fff;
-  border: 1px solid cadetblue;
-}
-
-.btn-cadet:focus, .btn-cadet:hover {
-  color: #fff;
-}
-
-.navbar-brand {
-  margin-bottom: 0px;
-}
-
 .circle {
   width: 200px;
   height: 200px;
@@ -44,17 +24,20 @@
   line-height: 200px;
   text-align: center;
   font-size: 100px;
+  background-image: url("img/fire.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1px;
+  transition: background-size .7s ease;
+}
+
+.circle:hover {
+  background-size: 500px;
 }
 
 .info-div {
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-  left: 0;
   text-align: center;
-  padding-bottom: 70px;
-  padding-left: 40px;
-  padding-right: 40px;
+  margin: 20px 0;
 }
 
 .info-div>p:last-child {
@@ -79,13 +62,24 @@
 .cigPerDay {
   width: 25px;
   height: 100%;
-  background: linear-gradient(red, yellow, white);
+  background: linear-gradient(black, red, yellow);
 }
 
 .cover {
   width: 25px;
-  height: 100%;
+  height: 160px;
   background-color: #f9f9f9;
+  transition: all .7 ease;
+  animation: 3s move;
+}
+
+@keyframes move {
+  from {
+    height: 100%;
+  }
+  to {
+    height;
+  }
 }
 
 .seven-days {
@@ -98,10 +92,6 @@
   width: 25px;
   text-align: center;
   margin-left: 3px;
-}
-
-#homeBtn {
-  margin-top: 30px;
 }
 
 footer {

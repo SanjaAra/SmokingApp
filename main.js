@@ -28,11 +28,15 @@ circle.addEventListener('click', update);
 function displayStat() {
   mainPage.style.display = "none";
   statPage.style.display = "block";
+  homeBtn.classList.remove("active");
+  statBtn.classList.add("active");
 };
 
 function displayHome() {
   mainPage.style.display = "block";
   statPage.style.display = "none";
+  homeBtn.classList.add("active");
+  statBtn.classList.remove("active");
 };
 //**** END display Pages ***** //
 
@@ -149,7 +153,7 @@ function noSmokeTime() {
 };
 
 (function messageRnd() {
-  let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Don't smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!"];
+  let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Stop smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!"];
   let i = Math.floor(Math.random() * quitSmokingMsg.length);
   message.innerHTML = quitSmokingMsg[i];
 }());
