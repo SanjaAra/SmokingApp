@@ -54,6 +54,7 @@ function dailyStat() {
 
 // *** Main Page functions *** //
 function update() {
+  playSound();
   updateVars();
 
   if (currentCigs >= 1) {
@@ -154,6 +155,12 @@ function noSmokeTime() {
   };
   lastTimeSpan.innerHTML = noSmoke;
 };
+
+function playSound() {
+  let smokeSound = document.createElement('audio');
+  smokeSound.setAttribute('src', "sound/lighting-cigarette-sound.wav");
+  smokeSound.play();
+}
 
 (function messageRnd() {
   let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Stop smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!", "Quit Smoking, Life is Beautiful!"];
