@@ -31,11 +31,19 @@ function displayStat() {
   statPage.style.display = "block";
   homeBtn.classList.remove("active");
   statBtn.classList.add("active");
-  for (let i = 0; i < 7; i++) {
-    cover[i].style.height = 160 - (allCigsStat[i] * 4) + 'px';
-  }
-
+  statEffect()
 };
+
+function statEffect() {
+  for (let i = 0; i < 7; i++) {
+    cover[i].style.height = '160px';
+  }
+  setTimeout(function() {
+    for (let i = 0; i < 7; i++) {
+      cover[i].style.height = 160 - (allCigsStat[i] * 4) + 'px';
+    }
+  }, 100)
+}
 
 function displayHome() {
   mainPage.style.display = "block";
