@@ -9,11 +9,12 @@ let newDayBtn = document.getElementById('newDayBtn'),
   message = document.getElementById('message'),
   mainPage = document.querySelector('#mainPage'),
   statPage = document.querySelector('#statPage'),
-  cover = document.getElementsByClassName('cover')[6],
+  cover = document.getElementsByClassName('cover'),
   currentCigs,
   startTimeCig,
   totalCigs,
   noSmoke,
+  allCigsStat,
   loop;
 
 setVars();
@@ -30,6 +31,10 @@ function displayStat() {
   statPage.style.display = "block";
   homeBtn.classList.remove("active");
   statBtn.classList.add("active");
+  for (let i = 0; i < 7; i++) {
+    cover[i].style.height = 160 - (allCigsStat[i] * 4) + 'px';
+  }
+
 };
 
 function displayHome() {
@@ -40,14 +45,19 @@ function displayHome() {
 };
 //**** END display Pages ***** //
 
-
-function dailyStat() {
+// *** Stat Page functions *** //
+function dailyStat7() {
   let totalCigsDaily = localStorage.totalCigsDaily;
-  cover.style.height = 160 - (totalCigsDaily * 4) + 'px';
+  allCigsStat.unshift(totalCigsDaily);
+  localStorage.allCigsStatLS = allCigsStat;
+
+  for (let i = 0; i < 7; i++) {
+    cover[i].style.height = 160 - (allCigsStat[i] * 4) + 'px';
+  }
   localStorage.totalCigsDaily = 0;
 };
 
-
+// *** END Stat Page functions *** //
 
 
 
@@ -70,15 +80,12 @@ function update() {
   }
   saveVars();
   updateView();
-  circle.style.backgroundSize = "600px";
-  setTimeout(function() {
-    circle.style.backgroundSize = "1px";
-  }, 500)
+  fireEffect();
 }
 
 function resetDay() {
   localStorage.totalCigsDaily = currentCigs;
-  dailyStat()
+  dailyStat7()
   localStorage.currentCigs = 0;
   setVars()
 };
@@ -97,6 +104,12 @@ function updateView() {
 function setVars() {
   (localStorage.currentCigs) ? currentCigs = localStorage.currentCigs: currentCigs = 0;
   (localStorage.totalCigs) ? totalCigs = localStorage.totalCigs: totalCigs = 0;
+  if (localStorage.allCigsStatLS) {
+    allCigsStat = localStorage.allCigsStatLS.split(',');
+    console.log(allCigsStat);
+  } else {
+    allCigsStat = [];
+  }
   if (localStorage.startTimeCig) {
     currentTime();
   };
@@ -162,10 +175,17 @@ function playSound() {
   smokeSound.play();
 }
 
+function fireEffect() {
+  circle.style.backgroundSize = "600px";
+  setTimeout(function() {
+    circle.style.backgroundSize = "1px";
+  }, 500)
+}
+
 (function messageRnd() {
   let quitSmokingMsg = ["Keep Calm and Quit Smoking!", "Stop smoke, or die!", "Quit smoking today,save your family!", "Is the value of your life this cheep!", "Quit Smoking, Life is Beautiful!"];
   let i = Math.floor(Math.random() * quitSmokingMsg.length);
   message.innerHTML = quitSmokingMsg[i];
 }());
 
-// *** Stat Page functions *** //
+// *** END Stat Page functions *** //
