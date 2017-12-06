@@ -179,7 +179,7 @@ function noSmokeTime() {
 
 function playSound() {
   let smokeSound = document.createElement('audio');
-  smokeSound.setAttribute('src', "sound/lighting-cigarette-sound.wav");
+  smokeSound.setAttribute('src', "sound/lighting-cigarette-sound.mp3");
   smokeSound.play();
 }
 
