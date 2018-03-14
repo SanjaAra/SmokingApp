@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
-  <title>Quit Smoking</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <title>Count de Smoke</title>
 </head>
 
 <body>
@@ -21,14 +22,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="#"><img class="img-responsive"src="img/stop-smoke.png" alt="Quit Smoking"></a>
+        <a class="navbar-brand" href="index.html">Count de Smoke</a>
       </div>
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="MyNavBar">
         <ul class="nav navbar-nav">
           <li id="homeBtn" class="active"><a href="#">Home Page</a></li>
-          <li id="newDayBtn"><a href="#">New Day</a></li>
           <li id="statBtn"><a href="#">Statistics</a></li>
+          <li id="quitInfoBtn"><a href="#">Benefits of Quitting Smoking</a></li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -41,12 +42,14 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12">
+          <h4 id="msgMainPage" class="text-center">Cigarettes smoked today</h4>
           <div class="circle"></div>
         </div>
       </div>
     </div>
     <div class="info-div">
-      <p>Last cigarette was: <span id="lastTimeSpan"></span></p>
+      <p>Time passed from the last cigarette:<br>
+        <span id="lastTimeSpan"></span></p>
       <p>Total cigarettes: <span id="totalSpan"></span></p>
       <p>Starting Date: <span id="dateSpan"></span></p>
     </div>
@@ -58,7 +61,6 @@
       <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
           <h3 class="text-center">Statistics</h3>
-          <p class="text-center">Last seven days of your smoking life</p>
           <div id="graficon">
             <div class="cigPerDay">
               <div class="cover"></div>
@@ -83,19 +85,50 @@
             </div>
           </div>
           <div class="seven-days">
-            <span class="day">D7</span>
-            <span class="day">D6</span>
-            <span class="day">D5</span>
-            <span class="day">D4</span>
-            <span class="day">D3</span>
-            <span class="day">D2</span>
-            <span class="day">D1</span>
+            <p class="text-center">Last seven days of your smoking life</p>
           </div>
         </div>
       </div>
     </div>
   </section>
   <!-- END Stat Page -->
+  <!-- Why you should quit Page -->
+  <section id="quitInfoPage">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+          <div class="margin-bottom-50">
+            <h3 class="text-center">Why You Should Quit Smoking</h3>
+            <p>The health effects of smoking are well known. But there are all kinds of benefits to kicking the habit.</p>
+            <ul class="quitBenefitsLi">
+              <li>
+                <h5><i class="fas fa-check-circle"></i> You'll live longer</h5> Your lungs will immediately work better. Within a year of quitting, your risk of heart attack declines by 50%. Within 10 years, your risk of lung cancer will be about the same as if you'd never smoked at all.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> You'll smile brighter</h5> Nicotine and tar stain your teeth.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> Your cholesterol will improve</h5>Smoking reduces HDL("good") cholesterol and may alter LDL("bad") cholesterol so it leads to plaque in our arteries.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> You'll look younger</h5> Nicotine can block the blod supply to your skin, and smoke dries your skin, both of which can increase wrinkles.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> You'll get sick less often</h5> Smoking damages your airways and makes you more prone to coughs, colds and infections.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> Food will taste better</h5> Smoking interferes with your senses of taste and smell.
+              </li>
+              <li>
+                <h5><i class="fas fa-check-circle"></i> You'll have more money</h5> Calculate how much money you will save if you wouldn't spend it on cigarettes. We do not say that you would save for Ferrari, but you would certainly have more money for travel or for some of your hobbies.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END Why you should quit Page -->
   <footer>
     <img src="img/white-crown.png" alt="Keep Calm and Quit Smoking">
     <span id="message">Keep Calm and Quit Smoking!</span>
