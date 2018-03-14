@@ -2,21 +2,42 @@
           Global Styles
 ********************************/
 
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash|Roboto');
+/* font-family: 'Berkshire Swash', cursive;
+font-family: 'Roboto', sans-serif;*/
+
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
 }
 
 /*******************************
           Layout Styles
 ********************************/
 
-.navbar-brand {
-  padding: 5px 15px;
+.navbar-default .navbar-brand {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 1.66em;
+  background-image: -webkit-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -moz-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -ms-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -o-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: linear-gradient(to right, #fba105, #B2110B, #B2110B, #000);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-.navbar-brand img {
-  height: 40px;
+.navbar-default .navbar-collapse {
+  position: fixed;
+  top: 50px;
+  z-index: 99999;
+  width: 100%;
+  background-color: #f9f9f9;
 }
 
 #statPage {
@@ -89,6 +110,42 @@
   margin-left: 3px;
 }
 
+/*** END Stat Page ***/
+
+/*** Info Page ***/
+
+.quitBenefitsLi {
+  list-style: none;
+}
+
+#quitInfoPage h3 {
+  font-family: 'Berkshire Swash', cursive;
+  line-height: 30px;
+  background-image: -webkit-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -moz-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -ms-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: -o-linear-gradient(left, #fba105, #B2110B, #B2110B, #000);
+  background-image: linear-gradient(to right, #fba105, #B2110B, #B2110B, #000);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.quitBenefitsLi h5 {
+  font-weight: bold;
+  font-size: 16px;
+  background-image: -webkit-linear-gradient(left, #B2110B, #197d26, #197d26);
+  background-image: -moz-linear-gradient(left, #B2110B, #197d26, #197d26);
+  background-image: -ms-linear-gradient(left, #B2110B, #197d26, #197d26);
+  background-image: -o-linear-gradient(left, #B2110B, #197d26, #197d26);
+  background-image: linear-gradient(to right, #B2110B, #197d26, #197d26);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/*** END Info Page ***/
+
 footer {
   height: 50px;
   line-height: 50px;
@@ -112,6 +169,14 @@ footer img {
           Specific Styles
 ********************************/
 
+.fa-check-circle {
+  color: #B2110B;
+}
+
 /*******************************
-          HElper Classes
+          Helper Classes
 ********************************/
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
