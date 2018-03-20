@@ -22,7 +22,7 @@ let newDayBtn = document.getElementById('newDayBtn'),
   noSmoke,
   allCigsStat,
   loop;
-console.log(navBtn);
+
 setVars();
 displayHome();
 
@@ -114,18 +114,6 @@ function update() {
   fireEffect();
 }
 
-
-setInterval(function() { //*** day reset
-  let today = new Date().getDay();
-  if (today != localStorage.numberOfDay) {
-    localStorage.totalCigsDaily = currentCigs;
-    dailyStat7()
-    localStorage.currentCigs = 0;
-    setVars()
-  }
-}, 1000);
-
-
 function updateView() {
   //***update Circle***
   circle.innerHTML = currentCigs;
@@ -163,6 +151,15 @@ function setVars() {
     currentTime();
   };
   updateView();
+  setInterval(function() { //*** day reset
+    let today = new Date().getDay();
+    if (today != localStorage.numberOfDay) {
+      localStorage.totalCigsDaily = currentCigs;
+      dailyStat7()
+      localStorage.currentCigs = 0;
+      setVars()
+    }
+  }, 1000);
 };
 
 function saveVars() {
